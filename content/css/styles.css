@@ -1,0 +1,41 @@
+audio {
+  display: none;
+}
+
+button {
+  font-size: 45px;
+  display: flex;
+  width: 400px;
+  height: 250px;
+  margin-left: 10px;
+  border-radius: 0px;
+  background-image: url("../../images/sobre.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border: none;
+}
+
+button:hover{
+  font-size: 50px;
+  width: 420px;
+  height: 260px;
+  margin-left: 0;
+  transition: 0.2s;
+}
+
+button span {
+  margin: 20px auto;
+  align-self: flex-start;
+  display:inline-block;
+}
+
+.ocultar {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 1s, opacity 1s linear;
+}
+
+.mostrar {
+  visibility: visible;
+  animation: 1s;
+}
