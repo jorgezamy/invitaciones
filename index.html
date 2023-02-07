@@ -40,12 +40,11 @@
         }
 
 
-        function PlaySound(soundobj) {
-            var thissound = document.getElementById(soundobj);
-            thissound.play();
-        };
+        // function PlaySound(soundobj) {
 
-        function abrir() {
+        // };
+
+        function abrir(soundobj) {
             var boton = document.getElementById("btnAbrir");
             var invitacion = document.getElementById("miDiv");
 
@@ -67,6 +66,8 @@
                         boton.style.display = "none";
                     }, 500);
             }
+
+            document.getElementById("mySound").play();
         }
 
 
@@ -75,7 +76,8 @@
 
 <body>
 
-    <button id="btnAbrir" type="button" onclick="abrir();PlaySound('mySound');">
+    <!-- <button id="btnAbrir" type="button" onclick="abrir();PlaySound('mySound');"> -->
+    <button id="btnAbrir" type="button" onclick="abrir()">
         <span id="abrir">ABRIR</span>
     </button>
 
