@@ -8,89 +8,29 @@
 
     <link href="content/css/styles.css" rel="stylesheet" />
 
-    <title>Cómo Aprender</title>
+    <script src="./content/js/includeHtml.js"></script>
+    <script src="./content/js/sound.js"></script>
+    <script src="./content/js/animation.js"></script>
 
-    <script>
-        function includeHTML() {
-            var z, i, elmnt, file, xhttp;
-            /* Loop through a collection of all HTML elements: */
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                /*search for elements with a certain atrribute:*/
-                file = elmnt.getAttribute("w3-include-html");
-                if (file) {
-                    /* Make an HTTP request using the attribute value as the file name: */
-                    xhttp = new XMLHttpRequest();
-                    xhttp.onreadystatechange = function () {
-                        if (this.readyState == 4) {
-                            if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-                            if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
-                            /* Remove the attribute, and call this function once more: */
-                            elmnt.removeAttribute("w3-include-html");
-                            includeHTML();
-                        }
-                    }
-                    xhttp.open("GET", file, true);
-                    xhttp.send();
-                    /* Exit the function: */
-                    return;
-                }
-            }
-        }
-
-
-        function PlaySound(soundobj) {
-            var thissound = document.getElementById(soundobj);
-            thissound.play();
-        };
-
-        function abrir() {
-            var boton = document.getElementById("btnAbrir");
-            var invitacion = document.getElementById("miDiv");
-
-            if (invitacion.style.display === "none") {
-                setTimeout(
-                    function () {
-                        invitacion.style.display = "block";
-                    }, 500);
-            } else {
-                invitacion.style.display = "none";
-            }
-
-            if (boton.style.display === "none") {
-                boton.style.display = "block";
-            } else {
-                boton.classList.add("ocultar");
-                setTimeout(
-                    function () {
-                        boton.style.display = "none";
-                    }, 500);
-            }
-        }
-
-
-    </script>
+    <title>ZAMCO</title>
 </head>
 
-<body>
+<body style="background-color: #052959; color: white;" onclick="abrir(); PlaySound('mySound');" id="btnAbrir">
 
-    <!-- <button id="btnAbrir" type="button" onclick="abrir();PlaySound('mySound');"> -->
-    <button id="btnAbrir" type="button" onclick="abrir();PlaySound('mySound');">
-        <span id="abrir">ABRIR</span>
-    </button>
+    <!-- <button id="btnAbrir" type="button"> -->
+    <div class="div_bienvenido">
+        <div class="div_bienvenido_texto">BIENVENIDO<img id="logo_mini" src="./content/img/zamco/logo_mini.png" /></div>
+        <!-- </button> -->
 
-    <!-- <div id="miDiv" style="display:none" onmouseover="PlaySound('mySound')"> -->
-    <div id="miDiv" style="display:none" onmouseover="PlaySound('mySound')">
-        <audio id='mySound' src='./royal.mp3'></audio>
+        <div id="miDiv" style="display:none" onmouseover="PlaySound('mySound')">
+            <audio id='mySound' src='./royal.mp3'></audio>
 
-        <!-- <div w3-include-html="h1.html"></div> -->
-        <div w3-include-html="./invitacion.html"></div>
+            <div w3-include-html="./invitacion.html"></div>
 
-        <script>
-            includeHTML();
-        </script>
-    </div>
+            <script>
+                includeHTML();
+            </script>
+        </div>
 </body>
 
 </html>
