@@ -40,11 +40,12 @@
         }
 
 
-        // function PlaySound(soundobj) {
+        function PlaySound(soundobj) {
+            var thissound = document.getElementById(soundobj);
+            thissound.play();
+        };
 
-        // };
-
-        function abrir(soundobj) {
+        function abrir() {
             var boton = document.getElementById("btnAbrir");
             var invitacion = document.getElementById("miDiv");
 
@@ -66,8 +67,6 @@
                         boton.style.display = "none";
                     }, 500);
             }
-
-            document.getElementById("mySound").play();
         }
 
 
@@ -77,13 +76,14 @@
 <body>
 
     <!-- <button id="btnAbrir" type="button" onclick="abrir();PlaySound('mySound');"> -->
-    <button id="btnAbrir" type="button" onclick="abrir()">
+        <button id="btnAbrir" type="button" onclick="abrir();PlaySound('mySound');">
         <span id="abrir">ABRIR</span>
     </button>
 
-    <div id="miDiv" style="display:none">
+    <!-- <div id="miDiv" style="display:none" onmouseover="PlaySound('mySound')"> -->
+        <div id="miDiv" style="display:none" onmouseover="PlaySound('mySound')">
         <audio id='mySound'
-            src='http://upload.wikimedia.org/wikipedia/commons/6/6f/Cello_Live_Performance_John_Michel_Tchaikovsky_Violin_Concerto_3rd_MVT_applaused_cut.ogg'></audio>
+            src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/Yodel_Sound_Effect.mp3'></audio>
 
         <!-- <div w3-include-html="h1.html"></div> -->
         <div w3-include-html="./invitacion.html"></div>
