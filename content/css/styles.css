@@ -1,12 +1,17 @@
 body {
+  /* background-color: #1b3530; */
+  /* background-color: #052959; /* AZUL*/
   margin: 0;
-  background-color: #052959;
   color: white;
 }
 
 #logo_mini {
-  width: 40px;
-  margin: 30px auto;
+  width: 35px;
+  bottom: 5%;
+  left: 50%;
+  place-content: center;
+  display: grid;
+  position: absolute;
 }
 
 .div_bienvenido {
@@ -17,18 +22,31 @@ body {
 }
 
 .div_bienvenido_texto {
-  font-size: 40px;
   height: 99%;
   width: 100%;
   display: grid;
   place-content: center;
-  transition: 0.2s;
+  /* transition: 0.2s; */
 }
 
-.div_bienvenido_texto:hover {
+/* .div_bienvenido_texto:hover {
   font-size: 45px;
   transition: 0.2s;
   cursor: pointer;
+} */
+
+.span1 {
+  font-size: px;
+}
+
+.span:hover {
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.span2 {
+  font-size: 40px;
 }
 
 .mostrar {

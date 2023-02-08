@@ -15,7 +15,7 @@
     <title>ZAMCO</title>
 </head>
 
-<body>
+<body style="background-color: #1B3530;">
 
     <div id="invitacion" style="display: none;">
         <audio id='mySound' src='./content/music/until I found You.mp3'></audio>
@@ -24,8 +24,13 @@
     </div>
 
     <div id="intro" class="div_bienvenido" onclick="abrir(); PlaySound('mySound');">
-        <div class="div_bienvenido_texto">BIENVENIDO<img id="logo_mini" src="./content/img/zamco/logo_mini.png" /></div>
+        <div class="div_bienvenido_texto">
+            <span class="span1">BIENVENIDO</span>
+            <span class="span2">Miriam & Jorge</span>
+        </div>
     </div>
+
+    <img id="logo_mini" src="./content/img/zamco/logo_mini.png" />
 
     <script>
         includeHTML();
