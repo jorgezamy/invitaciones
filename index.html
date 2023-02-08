@@ -15,22 +15,22 @@
     <title>ZAMCO</title>
 </head>
 
-<body style="background-color: #052959; color: white;" onclick="abrir(); PlaySound('mySound');" id="btnAbrir">
+<body>
 
-    <!-- <button id="btnAbrir" type="button"> -->
-    <div class="div_bienvenido">
+    <div id="invitacion" style="display: none;">
+        <audio id='mySound' src='./content/music/until I found You.mp3'></audio>
+
+        <div class="anchoPDF" w3-include-html="./mj.html"></div>
+    </div>
+
+    <div id="intro" class="div_bienvenido" onclick="abrir(); PlaySound('mySound');">
         <div class="div_bienvenido_texto">BIENVENIDO<img id="logo_mini" src="./content/img/zamco/logo_mini.png" /></div>
-        <!-- </button> -->
+    </div>
 
-        <div id="miDiv" style="display:none" onmouseover="PlaySound('mySound')">
-            <audio id='mySound' src='./royal.mp3'></audio>
+    <script>
+        includeHTML();
+    </script>
 
-            <div w3-include-html="./invitacion.html"></div>
-
-            <script>
-                includeHTML();
-            </script>
-        </div>
 </body>
 
 </html>
