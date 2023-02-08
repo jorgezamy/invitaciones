@@ -30,6 +30,7 @@ body {
 }
 
 .span1 {
+  text-align: center;
   font-size: px;
 }
 
@@ -41,6 +42,7 @@ body {
 
 .span2 {
   font-size: 40px;
+  text-decoration:underline;
 }
 
 .mostrar {
