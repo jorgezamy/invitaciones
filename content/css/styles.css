@@ -22,11 +22,14 @@ body {
 }
 
 .div_bienvenido_texto {
-  height: 99%;
+  height: 70%;
   width: 100%;
   display: grid;
   place-content: center;
-  /* transition: 0.2s; */
+}
+
+.div_bienvenido_texto:hover{
+  cursor: pointer;
 }
 
 .span1 {
@@ -42,7 +45,7 @@ body {
 
 .span2 {
   font-size: 40px;
-  text-decoration:underline;
+  text-decoration: underline;
 }
 
 .mostrar {

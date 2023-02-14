@@ -12,25 +12,33 @@
     <script src="./content/js/sound.js"></script>
     <script src="./content/js/animation.js"></script>
 
+    <script>(function (d, s, id) { var js, pjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//www.tickcounter.com/static/js/loader.js"; pjs.parentNode.insertBefore(js, pjs); }(document, "script", "tickcounter-sdk"));</script>
+
     <title>ZAMCO</title>
 </head>
 
 <body style="background-color: #1B3530;">
 
+
     <div id="invitacion" style="display: none;">
         <audio id='mySound' src='./content/music/until I found You.mp3'></audio>
 
-        <div class="anchoPDF" w3-include-html="./MJ.html"></div>
+        <div class="anchoPDF" w3-include-html="./0001-marianaYjavier.html">
+        </div>
     </div>
 
     <div id="intro" class="div_bienvenido" onclick="abrir(); PlaySound('mySound');">
+        <a data-type="countdown" data-id="3851975" class="tickcounter"
+            style="display: block; width: 250px; height: 62px; margin: 0 auto" title="Countdown"
+            href="//www.tickcounter.com/">Countdown</a>
+
         <div class="div_bienvenido_texto">
             <span class="span1">BIENVENIDO A NUESTRA BODA</span>
             <span class="span2">VER INVITACIÓN</span>
         </div>
-    </div>
 
-    <img id="logo_mini" src="./content/img/zamco/logo_mini.png" />
+        <img id="logo_mini" src="./content/img/zamco/logo_mini.png" />
+    </div>
 
     <script>
         includeHTML();
